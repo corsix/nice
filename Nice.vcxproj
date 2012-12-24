@@ -13,10 +13,12 @@
   <ItemGroup>
     <ClInclude Include="include\nice\com.h" />
     <ClInclude Include="include\nice\d3.h" />
+    <ClInclude Include="include\nice\dxgi.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="source\com.cpp" />
     <ClCompile Include="source\d3.cpp" />
+    <ClCompile Include="source\dxgi.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{126C48FF-47B2-4AF0-BD0B-841AE841EAC5}</ProjectGuid>
