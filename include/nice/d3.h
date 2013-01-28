@@ -923,7 +923,7 @@ namespace C6
       D3::DepthStencilView createDepthStencilView(D3::Resource& pResource, const D3D10_DEPTH_STENCIL_VIEW_DESC& pDesc);
       D3::RasterizerState RSGetState();
       void generateMips(D3::ShaderResourceView& pShaderResourceView);
-      D3::Texture2D createTexture2D(const D3D10_TEXTURE2D_DESC& pDesc);
+      D3::Texture2D createTexture2D(const D3D10_TEXTURE2D_DESC& pDesc, const D3D10_SUBRESOURCE_DATA* pInitialData = nullptr);
       D3::Texture2D createTexture2D(const D3D10_TEXTURE2D_DESC& pDesc, const D3D10_SUBRESOURCE_DATA& pInitialData);
       D3::GeometryShader GSGetShader();
       D3::Buffer createBuffer(const D3D10_BUFFER_DESC& pDesc);

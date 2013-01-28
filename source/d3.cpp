@@ -683,10 +683,10 @@ namespace C6
       getRawInterface()->GenerateMips(pShaderResourceView.getRawInterface());
     }
 
-    D3::Texture2D Device::createTexture2D(const D3D10_TEXTURE2D_DESC& pDesc)
+    D3::Texture2D Device::createTexture2D(const D3D10_TEXTURE2D_DESC& pDesc, const D3D10_SUBRESOURCE_DATA* pInitialData)
     {
       ID3D10Texture2D* ppTexture2D = nullptr;
-      HRESULT hr = getRawInterface()->CreateTexture2D(&pDesc, nullptr, &ppTexture2D);
+      HRESULT hr = getRawInterface()->CreateTexture2D(&pDesc, pInitialData, &ppTexture2D);
       if(FAILED(hr)) throw COMException(hr, "ID3D10Device::CreateTexture2D");
       return D3::Texture2D(ppTexture2D);
     }
