@@ -32,6 +32,12 @@ namespace C6
       enum {size = 1};
     };
 
+    template <>
+    struct sizeof_or1<const void>
+    {
+      enum {size = 1};
+    };
+
     template <typename T>
     struct bcount
     {
