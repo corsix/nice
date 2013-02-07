@@ -24,6 +24,9 @@
     <ClInclude Include="include\nice\dxgi.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="include\nice\dw.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="source\com.cpp">
@@ -33,6 +36,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="source\dxgi.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="source\dw.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
