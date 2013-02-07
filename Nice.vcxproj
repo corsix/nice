@@ -12,6 +12,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="include\nice\com.h" />
+    <ClInclude Include="include\nice\d2.h" />
     <ClInclude Include="include\nice\d3.h" />
     <ClInclude Include="include\nice\dw.h" />
     <ClInclude Include="include\nice\dxgi.h" />
@@ -19,6 +20,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="source\com.cpp" />
+    <ClCompile Include="source\d2.cpp" />
     <ClCompile Include="source\d3.cpp" />
     <ClCompile Include="source\dw.cpp" />
     <ClCompile Include="source\dxgi.cpp" />
