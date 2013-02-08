@@ -733,7 +733,8 @@ namespace C6
       typename C6::internal::konst<D3::PixelShader, const_void_Container>::T createPixelShader(const_void_Container&& pShaderBytecode)
       {
         ID3D10PixelShader* ppPixelShader = nullptr;
-        HRESULT hr = getRawInterface()->CreatePixelShader(C6::internal::ecount<const_void_Container>::data(pShaderBytecode), static_cast<SIZE_T>(C6::internal::ecount<const_void_Container>::size(pShaderBytecode) * C6::internal::bcount<decltype(pShaderBytecode.data())>::elem_size), &ppPixelShader);
+        auto data = C6::internal::ecount<const_void_Container>::data(pShaderBytecode);
+        HRESULT hr = getRawInterface()->CreatePixelShader(data, static_cast<SIZE_T>(C6::internal::ecount<const_void_Container>::size(pShaderBytecode) * C6::internal::bcount<decltype(data)>::elem_size), &ppPixelShader);
         if(FAILED(hr)) throw COMException(hr, "ID3D10Device::CreatePixelShader");
         return D3::PixelShader(ppPixelShader);
       }
@@ -763,7 +764,8 @@ namespace C6
       typename C6::internal::konst<D3::InputLayout, const_void_Container>::T createInputLayout(const_D3D10_INPUT_ELEMENT_DESC_Container&& pInputElementDescs, const_void_Container&& pShaderBytecodeWithInputSignature)
       {
         ID3D10InputLayout* ppInputLayout = nullptr;
-        HRESULT hr = getRawInterface()->CreateInputLayout(C6::internal::ecount<const_D3D10_INPUT_ELEMENT_DESC_Container>::data(pInputElementDescs), static_cast<unsigned int>(C6::internal::ecount<const_D3D10_INPUT_ELEMENT_DESC_Container>::size(pInputElementDescs)), C6::internal::ecount<const_void_Container>::data(pShaderBytecodeWithInputSignature), static_cast<SIZE_T>(C6::internal::ecount<const_void_Container>::size(pShaderBytecodeWithInputSignature) * C6::internal::bcount<decltype(pShaderBytecodeWithInputSignature.data())>::elem_size), &ppInputLayout);
+        auto data = C6::internal::ecount<const_void_Container>::data(pShaderBytecodeWithInputSignature);
+        HRESULT hr = getRawInterface()->CreateInputLayout(C6::internal::ecount<const_D3D10_INPUT_ELEMENT_DESC_Container>::data(pInputElementDescs), static_cast<unsigned int>(C6::internal::ecount<const_D3D10_INPUT_ELEMENT_DESC_Container>::size(pInputElementDescs)), data, static_cast<SIZE_T>(C6::internal::ecount<const_void_Container>::size(pShaderBytecodeWithInputSignature) * C6::internal::bcount<decltype(data)>::elem_size), &ppInputLayout);
         if(FAILED(hr)) throw COMException(hr, "ID3D10Device::CreateInputLayout");
         return D3::InputLayout(ppInputLayout);
       }
@@ -888,7 +890,8 @@ namespace C6
       typename C6::internal::konst<D3::GeometryShader, const_void_Container>::T createGeometryShader(const_void_Container&& pShaderBytecode)
       {
         ID3D10GeometryShader* ppGeometryShader = nullptr;
-        HRESULT hr = getRawInterface()->CreateGeometryShader(C6::internal::ecount<const_void_Container>::data(pShaderBytecode), static_cast<SIZE_T>(C6::internal::ecount<const_void_Container>::size(pShaderBytecode) * C6::internal::bcount<decltype(pShaderBytecode.data())>::elem_size), &ppGeometryShader);
+        auto data = C6::internal::ecount<const_void_Container>::data(pShaderBytecode);
+        HRESULT hr = getRawInterface()->CreateGeometryShader(data, static_cast<SIZE_T>(C6::internal::ecount<const_void_Container>::size(pShaderBytecode) * C6::internal::bcount<decltype(data)>::elem_size), &ppGeometryShader);
         if(FAILED(hr)) throw COMException(hr, "ID3D10Device::CreateGeometryShader");
         return D3::GeometryShader(ppGeometryShader);
       }
@@ -934,7 +937,8 @@ namespace C6
       typename C6::internal::konst<D3::VertexShader, const_void_Container>::T createVertexShader(const_void_Container&& pShaderBytecode)
       {
         ID3D10VertexShader* ppVertexShader = nullptr;
-        HRESULT hr = getRawInterface()->CreateVertexShader(C6::internal::ecount<const_void_Container>::data(pShaderBytecode), static_cast<SIZE_T>(C6::internal::ecount<const_void_Container>::size(pShaderBytecode) * C6::internal::bcount<decltype(pShaderBytecode.data())>::elem_size), &ppVertexShader);
+        auto data = C6::internal::ecount<const_void_Container>::data(pShaderBytecode);
+        HRESULT hr = getRawInterface()->CreateVertexShader(data, static_cast<SIZE_T>(C6::internal::ecount<const_void_Container>::size(pShaderBytecode) * C6::internal::bcount<decltype(data)>::elem_size), &ppVertexShader);
         if(FAILED(hr)) throw COMException(hr, "ID3D10Device::CreateVertexShader");
         return D3::VertexShader(ppVertexShader);
       }
